@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Eisvóre - Pre Order</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+    
+    .order-form {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+    
+    select {
+      cursor: pointer;
+    }
+    
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+    
+    .submit-btn:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+      text-decoration: none;
+    }
+    
+    .back-link:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pre Order Le Eisvóre</h1>
+    
+    <div class="order-form">
+      <form id="preOrderForm">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Nomor Telepon/WhatsApp</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Alamat Pengiriman</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="variant">Varian Parfum</label>
+          <select id="variant" name="variant" required>
+            <option value="">-- Pilih Varian --</option>
+            <option value="Le Eisvóre">Le Eisvóre (Fresh)</option>
+            <option value="Le Eisvóre Noir">Le Eisvóre Noir (Intense)</option>
+            <option value="Both">Keduanya</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="quantity">Jumlah</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </div>
+        
+        <button type="submit" class="submit-btn">Konfirmasi Pre Order</button>
+      </form>
+    </div>
+    
+    <a href="/index.html" class="back-link">← Kembali ke halaman utama</a>
+  </div>
+  
+  <footer>
+    © 2025 Le Eisvóre · Follow us @LeEisvore
+  </footer>
+
+  <script>
+    document.getElementById('preOrderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Terima kasih! Pre-order Anda telah berhasil tercatat. Kami akan menghubungi Anda dalam 1-2 hari kerja.');
+      window.location.href = '/index.html';
+    });
+  </script>
+</body>
+</html>
